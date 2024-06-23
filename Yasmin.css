@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(to bottom, #8A2BE2, #E6E6FA);
+    height: 100vh;
+    margin: 0; /* Adjusted to 0 for better control over margins */
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px; /* Added padding for better spacing */
+    box-sizing: border-box; /* Added box-sizing for consistent padding and border sizing */
+}
+
+.arbol {
+    width: 100%; /* Make the image responsive */
+    max-width: 200px; /* Maximum width */
+    margin: 0 auto 20px; /* Centered and margin bottom */
+    display: block; /* Block display for centered margin auto */
+}
+
+.titulo {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(244, 247, 247, 0.8), 
+                 0 0 20px rgba(0, 255, 255, 0.6), 
+                 0 0 30px rgba(0, 255, 255, 0.4), 
+                 0 0 40px rgba(0, 255, 255, 0.2);
+    margin-bottom: 20px; /* Added margin bottom for spacing */
+}
+
+.lista {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    width: calc(100% - 40px); /* Full width minus margin */
+    max-width: 300px; /* Maximum width */
+    margin: 10px;
+    text-align: center;
+}
+
+.recuadro {
+    background-color: #66c2ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(244, 247, 247, 0.8),
+                0 0 20px rgba(0, 255, 255, 0.6),
+                0 0 30px rgba(0, 255, 255, 0.4),
+                0 0 40px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recuadro span {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.texto-oculto {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 16px;
+    max-height: calc(100% - 40px);
+    overflow-y: auto;
+}
+
+.texto-oculto p {
+    margin: 0;
+}
+
+.texto-oculto.mostrar {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .item {
+        width: calc(50% - 40px); /* Adjust width for larger screens */
+    }
+}
